@@ -1,0 +1,32 @@
+// Abstract
+@import './abstract/constants';
+@import './abstract/placeholders';
+@import './abstract/mixins';
+
+// Base
+@import './base/fonts';
+@import './base/base';
+@import './base/reset';
+@import './base/arrows';
+@import './base/buttons';
+@import './base/icons';
+@import './base/burger';
+@import './base/checkbox';
+@import './base/input';
+
+// Layout
+@import './layout/wrapper';
+
+// Components
+@import './components/header';
+@import './components/slider';
+@import './components/coast';
+@import './components/portfolio';
+@import './components/reviews';
+@import './components/advantage';
+@import './components/team';
+@import './components/partners';
+@import './components/clients';
+@import './components/questions';
+@import './components/feedback';
+@import './components/footer';
