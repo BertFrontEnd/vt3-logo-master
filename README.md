@@ -1,3 +1,3 @@
 Website development
 
-## [Gulp From Scratch](https://bertfrontend.github.io/gulp-from-scratch/dist)
+## [Website development](https://bertfrontend.github.io/vt3-logo-master/dist)
