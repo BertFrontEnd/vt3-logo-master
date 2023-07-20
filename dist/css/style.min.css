@@ -84,11 +84,105 @@ html body {
   font-size: 1.6rem;
 }
 
-a {
-  color: yellow;
-  text-decoration: none;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Remove default list style type */
+ul,
+ol {
+  list-style-type: none;
+}
+
+/* Remove default padding */
+ul,
+ol,
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd,
+fieldset {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  padding: 0;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 button {
   border: none;
   outline: none;
@@ -110,4 +204,81 @@ input[type=submit] {
   position: relative;
   max-width: 1792px;
   margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  padding: 30px 0 30px 0;
+  background: #4d3f75;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.header .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.header .header__wrapper .header__logo {
+  position: absolute;
+}
+.header .header__wrapper .header__contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 14px;
+}
+.header .header__wrapper .header__contacts .contacts__phone,
+.header .header__wrapper .header__contacts .contacts__mail {
+  margin-left: 25px;
+  padding-left: 30px;
+  font-family: "Yantramanav", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+}
+.header .header__wrapper .header__contacts .contacts__language {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-left: 43px;
+  font-size: 1.4rem;
+  color: #d2d2d2;
+}
+.header .header__wrapper .header__contacts .contacts__language .language__flag {
+  margin-left: 10px;
+  margin-right: 6px;
+}
+.header .header__wrapper .header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  column-gap: 5px;
+}
+.header .header__wrapper .header__navigation .navigation__link {
+  max-width: 250px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.header .header__wrapper .header__navigation .navigation__link a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.header .header__wrapper .header__navigation .navigation__link ul {
+  display: none;
+  margin-top: 16px;
+}
+.header .header__wrapper .header__navigation .navigation__link li {
+  margin-bottom: 16px;
 }
