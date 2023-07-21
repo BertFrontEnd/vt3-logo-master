@@ -1,15 +1,16 @@
 header.header
-  .header__wrapper.wrapper
-    section.header__logo
-    section.header__contacts
+  section.header__wrapper.wrapper
+    a.header__logo(href="")
+      img(src="@img/logo.svg" alt="")
+    .header__contacts
       a.contacts__phone(href="tel:+375292577007") +375 (29) 257-70-07
       a.contacts__mail(href="mailto:3577007by@gmail.com") 3577007by@gmail.com
       .contacts__language
         span.language__title RU
         select.language__flag
-          option.flag__rus(label="rus")
-          option.flag__bel(label="bel")
-    section.header__line
+          option.flag__rus(label="")
+          option.flag__bel(label="")
+    .header__line
     navigation.header__navigation
       .navigation__link
         a(href="#") Все услуги

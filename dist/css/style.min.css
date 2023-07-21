@@ -201,7 +201,7 @@ input[type=submit] {
 }
 
 .wrapper {
-  position: relative;
+  /* position: relative; */
   max-width: 1792px;
   margin: 0 auto;
 }
@@ -222,6 +222,28 @@ input[type=submit] {
 }
 .header .header__wrapper .header__logo {
   position: absolute;
+  top: 0;
+  left: 54px;
+  width: 342px;
+  height: 83px;
+  text-decoration: none;
+}
+.header .header__wrapper .header__line {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 16;
+  margin-bottom: 20px;
+}
+.header .header__wrapper .header__line::before {
+  display: block;
+  width: 1494px;
+  height: 1px;
+  content: "";
+  background: linear-gradient(to right, transparent 0%, #fff 50%, transparent 100%);
 }
 .header .header__wrapper .header__contacts {
   display: flex;
@@ -246,16 +268,45 @@ input[type=submit] {
 .header .header__wrapper .header__contacts .contacts__language {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   padding-left: 43px;
+}
+.header .header__wrapper .header__contacts .contacts__language .language__title {
   font-size: 1.4rem;
   color: #d2d2d2;
 }
 .header .header__wrapper .header__contacts .contacts__language .language__flag {
+  width: 30px;
+  height: 30px;
   margin-left: 10px;
   margin-right: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  /* background: transparent; */
+  appearance: none;
+}
+.header .header__wrapper .header__contacts .contacts__language .language__flag .flag__rus,
+.header .header__wrapper .header__contacts .contacts__language .language__flag .flag__bel {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: transparent;
+}
+.header .header__wrapper .header__contacts .contacts__language .language__flag .flag__rus::before,
+.header .header__wrapper .header__contacts .contacts__language .language__flag .flag__bel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 300px;
+  height: 300px;
+  content: "ru";
+  background-color: #fff;
+  background-image: url("../img/icons/decoration/flag-ru.svg");
 }
 .header .header__wrapper .header__navigation {
   display: flex;

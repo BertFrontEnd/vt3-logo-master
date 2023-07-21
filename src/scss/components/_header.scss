@@ -10,6 +10,32 @@
 
     .header__logo {
       position: absolute;
+      top: 0;
+      left: 54px;
+      width: 342px;
+      height: 83px;
+      text-decoration: none;
+    }
+
+    .header__line {
+      @include alignment(flex-end, center);
+      width: 100%;
+      margin-top: 16;
+      margin-bottom: 20px;
+
+      &::before {
+        display: block;
+        width: 1494px;
+        height: 1px;
+        content: '';
+
+        background: linear-gradient(
+          to right,
+          transparent 0%,
+          #fff 50%,
+          transparent 100%
+        );
+      }
     }
 
     .header__contacts {
@@ -30,14 +56,45 @@
       }
 
       .contacts__language {
-        @include alignment(center, flex-start);
+        @include alignment(center, center);
         padding-left: 43px;
-        font-size: 1.4rem;
-        color: $text-color-language;
+
+        .language__title {
+          font-size: 1.4rem;
+          color: $text-color-language;
+        }
 
         .language__flag {
+          width: 30px;
+          height: 30px;
           margin-left: 10px;
           margin-right: 6px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          /* background: transparent; */
+          appearance: none;
+
+          .flag__rus,
+          .flag__bel {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background: transparent;
+
+            &::before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+              width: 300px;
+              height: 300px;
+              content: 'ru';
+              background-color: #fff;
+              background-image: url('../img/icons/decoration/flag-ru.svg');
+            }
+          }
         }
       }
     }
