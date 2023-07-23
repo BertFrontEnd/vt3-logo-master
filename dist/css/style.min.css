@@ -1,3 +1,7 @@
+.header .header__wrapper .header__contacts .contacts__language .language__current .arrow {
+  transition: all 0.3s ease-out;
+}
+
 @font-face {
   font-family: "Raleway";
   font-display: swap;
@@ -266,6 +270,7 @@ input[type=submit] {
   color: #ffffff;
 }
 .header .header__wrapper .header__contacts .contacts__language {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,36 +282,63 @@ input[type=submit] {
   font-size: 1.4rem;
   color: #d2d2d2;
 }
-.header .header__wrapper .header__contacts .contacts__language .language__flag {
-  width: 30px;
+.header .header__wrapper .header__contacts .contacts__language .language__current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 38px;
   height: 30px;
   margin-left: 10px;
   margin-right: 6px;
-  border: none;
-  outline: none;
   cursor: pointer;
-  /* background: transparent; */
-  appearance: none;
 }
-.header .header__wrapper .header__contacts .contacts__language .language__flag .flag__rus,
-.header .header__wrapper .header__contacts .contacts__language .language__flag .flag__bel {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  background: transparent;
+.header .header__wrapper .header__contacts .contacts__language .language__current .flag {
+  width: 24px;
+  height: 18px;
+  background: url("../img/icons/decoration/flag-ru.svg") no-repeat left center;
 }
-.header .header__wrapper .header__contacts .contacts__language .language__flag .flag__rus::before,
-.header .header__wrapper .header__contacts .contacts__language .language__flag .flag__bel::before {
-  position: absolute;
-  top: 0;
-  left: 0;
+.header .header__wrapper .header__contacts .contacts__language .language__current .arrow {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #ffffff;
+  content: "";
+  /* transform: translateY(-50%); */
+}
+.header .header__wrapper .header__contacts .contacts__language .language__current:hover .arrow {
+  transform-origin: center center;
+  transform: rotateX(180deg);
+}
+.header .header__wrapper .header__contacts .contacts__language .language__current:hover .language__flag {
   display: block;
-  width: 300px;
-  height: 300px;
-  content: "ru";
-  background-color: #fff;
-  background-image: url("../img/icons/decoration/flag-ru.svg");
+}
+.header .header__wrapper .header__contacts .contacts__language .language__flag {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  display: none;
+  /* width: 24px;
+  height: 18px; */
+}
+.header .header__wrapper .header__contacts .contacts__language .language__flag a:not(:last-child) {
+  margin-bottom: 5px;
+}
+.header .header__wrapper .header__contacts .contacts__language .language__flag .rus,
+.header .header__wrapper .header__contacts .contacts__language .language__flag .bel {
+  display: block;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+.header .header__wrapper .header__contacts .contacts__language .language__flag .rus {
+  background: url("../img/icons/decoration/flag-ru.svg") no-repeat center;
+}
+.header .header__wrapper .header__contacts .contacts__language .language__flag .bel {
+  background: url("../img/icons/decoration/flag-by.svg") no-repeat center;
 }
 .header .header__wrapper .header__navigation {
   display: flex;
